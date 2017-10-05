@@ -1,3 +1,6 @@
+require_relative "menu.rb"
+
+menu = Menu.new
 done = false
 
 puts "Hello, welcome to our pizza express delivery"
@@ -11,7 +14,8 @@ while not done
   choice = gets.chomp.to_i
   case choice
   when 1
-    puts "Let me show you the menu"
+    puts "Let me show you the menu\n"
+    menu.print
   when 2
     done = true
   else
